@@ -1,6 +1,9 @@
 package com.argprog.dtobandaescolar.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,5 +19,10 @@ public class AlumnoController {
     @PostMapping("/alumnos/save")
     public void saveAlumno(@RequestBody Alumno alumno){
         alumnoInter.saveAlumno(alumno);
+    }
+
+    @GetMapping("/alumnos/traer")
+    public List<Alumno> getAlumnos(){
+        return  alumnoInter.getAlumnos();
     }
 }
