@@ -12,4 +12,6 @@ public interface IInstrumentoService {
     public void saveInstrumento(Instrumento instrumento);
 
     public void deleteInstrumento(Long idInstrumento);
+
+    public Instrumento findInstrumentoByNombre(String nombre);
 }

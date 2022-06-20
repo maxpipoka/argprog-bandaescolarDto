@@ -32,4 +32,10 @@ public class InstrumentoService implements IInstrumentoService{
     public void deleteInstrumento(Long idInstrumento){
         instruRepo.deleteById(idInstrumento);
     }
+
+    @Override
+    public Instrumento findInstrumentoByNombre(String nombre){
+        Instrumento findedInstrumento= instruRepo.findInstrumentoByNombre(nombre);
+        return findedInstrumento; 
+    }
 }
